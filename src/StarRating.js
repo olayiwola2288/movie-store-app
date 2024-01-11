@@ -27,6 +27,8 @@ export default function StarRating({ maxRating = 5 }) {
             key={i}
             onRate={() => handleRating(i + 1)}
             full={rating >= i + 1}
+            onHoverIn={() =>setTemRating(i + 1)}
+            onHoverOut={() =>setTemRating(0)}
           />
         ))}
       </div>
