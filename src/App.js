@@ -58,8 +58,10 @@ export default function App() {
     <>
       <Navbar movies={movies}>
         <NavInput />
+
         <NumResults movies={movies} />
       </Navbar>
+
       <Main>
         <Box>
           <MovieList movies={movies} />
@@ -216,6 +218,7 @@ function WatchedMovieList({ watched }) {
 }
 
 function WatchedMovie({ movie }) {
+  
   return (
     <li>
       <img src={movie.Poster} alt={`${movie.Title} poster`} />
